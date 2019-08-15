@@ -5,12 +5,12 @@ import Loader from "react-loader-spinner";
 import { getData } from "../actions";
 
 import Movie from "./Movie";
+import MoviesNav from "./MoviesNav";
 
 const MoviesList = props => {
-  console.log("MovieList Props", props);
   return (
     <>
-      <button onClick={props.getData}>All Movies</button>
+      <MoviesNav getData={props.getData} />
       {props.isLoading && (
         <Loader type="tailspin" color="#00BFFF" height="15" width="100" />
       )}

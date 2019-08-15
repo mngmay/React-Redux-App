@@ -7,7 +7,8 @@ import {
 const initialState = {
   movies: [],
   isLoading: false,
-  error: ""
+  error: "",
+  favoritemovies: []
 };
 
 export const moviesReducer = (state = initialState, action) => {

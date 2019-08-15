@@ -2,24 +2,22 @@ import React from "react";
 
 const Movie = ({ movie }) => {
   return (
-    <div className="movie-card">
-      <div class="ui card">
-        <div class="content">
-          <div class="header">{movie.title}</div>
-          <div class="description">{movie.description}</div>
-        </div>
-        <div class="extra content">
-          <div>Directed By: {movie.director}</div>
-          <div>Released: {movie.release_date}</div>
-          <span class="left floated like">
-            <i class="add icon" />
-            Watched
-          </span>
-          <span class="right floated star">
-            <i class="star icon" />
-            Favorite
-          </span>
-        </div>
+    <div className="ui card">
+      <div className="content">
+        <div className="header">{movie.title}</div>
+        <div className="description">{movie.description}</div>
+      </div>
+      <div className="extra content">
+        <div>Directed By: {movie.director}</div>
+        <div>Released: {movie.release_date}</div>
+        <span className="left floated like">
+          <i className="add icon" />
+          Watched
+        </span>
+        <span className="right floated star">
+          <i className="star icon" />
+          Favorite
+        </span>
       </div>
     </div>
   );

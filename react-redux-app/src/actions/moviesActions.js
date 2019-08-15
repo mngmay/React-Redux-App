@@ -10,7 +10,6 @@ export const getData = () => {
     axios
       .get("https://ghibliapi.herokuapp.com/films")
       .then(res => {
-        console.log(res);
         dispatch({ type: FETCH_MOVIES_DATA_SUCCESS, payload: res.data });
       })
       .catch(err =>
