@@ -7,15 +7,19 @@ import { getData } from "../actions";
 import Movie from "./Movie";
 
 const MoviesList = props => {
-  console.log(props);
+  console.log("MovieList Props", props);
   return (
-    <div className="movie-list">
-      {props.movies > 0 ? (
-        props.movies.map(movie => <Movie movie={movie} />)
-      ) : (
-        <div>Our Theater is Empty :(</div>
+    <>
+      <button onClick={props.getData}>All Movies</button>
+      {props.isLoading && (
+        <Loader type="tailspin" color="#00BFFF" height="15" width="100" />
       )}
-    </div>
+      <div className="movies-list">
+        {props.movies.map(movie => (
+          <Movie key={movie.id} movie={movie} />
+        ))}
+      </div>
+    </>
   );
 };
 

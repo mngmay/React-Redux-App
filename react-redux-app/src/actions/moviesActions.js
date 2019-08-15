@@ -11,6 +11,7 @@ export const getData = () => {
       .get("https://ghibliapi.herokuapp.com/films")
       .then(res => {
         console.log(res);
+        dispatch({ type: FETCH_MOVIES_DATA_SUCCESS, payload: res.data });
       })
       .catch(err =>
         dispatch({ type: FETCH_MOVIES_DATA_FAILURE, payload: err.response })
