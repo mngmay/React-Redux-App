@@ -1,6 +1,6 @@
 import React from "react";
 
-const Movie = ({ movie }) => {
+const Movie = ({ movie, addMovie }) => {
   return (
     <div className="ui card">
       <div className="content">
@@ -15,7 +15,7 @@ const Movie = ({ movie }) => {
           Watched
         </span>
         <span className="right floated star">
-          <i className="star icon" />
+          <i className="star icon" onClick={e => addMovie(movie)} />
           Favorite
         </span>
       </div>

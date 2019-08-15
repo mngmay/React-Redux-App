@@ -4,7 +4,7 @@ const MoviesNav = props => {
   return (
     <div className="nav-btns">
       <button onClick={props.getData}>All Movies</button>
-      <button onClick={props.getData}>Favorited Movies</button>
+      <button onClick={props.getFavorites}>Favorited Movies</button>
     </div>
   );
 };
