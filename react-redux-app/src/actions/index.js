@@ -1,0 +1,6 @@
+export {
+  getData,
+  FETCH_MOVIES_DATA_START,
+  FETCH_MOVIES_DATA_SUCCESS,
+  FETCH_MOVIES_DATA_FAILURE
+} from "./moviesActions";
