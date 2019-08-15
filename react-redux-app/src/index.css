@@ -39,7 +39,7 @@ h1 {
 }
 
 .nav-btns {
-  width: 75%;
+  width: 900px;
   display: flex;
   justify-content: space-around;
   margin: 20px;
@@ -53,4 +53,22 @@ button {
   border: 2px solid white;
   color: white;
   font-size: 20px;
+}
+
+button:hover {
+  background-color: white;
+  border: 1px dashed #106198;
+  color: #106198;
+}
+
+.all {
+  display: flex;
+}
+
+.favs {
+  display: none;
+}
+
+.watched {
+  display: none;
 }

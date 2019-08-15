@@ -16,15 +16,22 @@ const MoviesList = props => {
 
   return (
     <>
-      <MoviesNav
-        favoritemovies={props.favoritemovies}
-        getData={props.getData}
-      />
+      <MoviesNav getData={props.getData} />
       {props.isLoading && (
         <Loader type="tailspin" color="#00BFFF" height="15" width="100" />
       )}
-      <div className="movies-list">
+      <div className="movies-list all">
         {props.movies.map(movie => (
+          <Movie key={movie.id} movie={movie} addMovie={addMovie} />
+        ))}
+      </div>
+      <div className="movies-list favs">
+        {props.favoritemovies.map(movie => (
+          <Movie key={movie.id} movie={movie} addMovie={addMovie} />
+        ))}
+      </div>
+      <div className="movies-list watched">
+        {props.watchedmovies.map(movie => (
           <Movie key={movie.id} movie={movie} addMovie={addMovie} />
         ))}
       </div>
