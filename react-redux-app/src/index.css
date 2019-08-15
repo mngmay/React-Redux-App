@@ -38,14 +38,19 @@ h1 {
   background-color: transparent;
 }
 
-button {
-  outline: none;
-  width: 150px;
-  border-radius: 5px;
-}
-
 .nav-btns {
-  width: 350px;
+  width: 75%;
   display: flex;
   justify-content: space-around;
+  margin: 20px;
+}
+
+button {
+  outline: none;
+  width: 250px;
+  border-radius: 5px;
+  background-color: #106198;
+  border: 2px solid white;
+  color: white;
+  font-size: 20px;
 }

@@ -11,11 +11,11 @@ const Movie = ({ movie, addMovie }) => {
         <div>Directed By: {movie.director}</div>
         <div>Released: {movie.release_date}</div>
         <span className="left floated like">
-          <i className="add icon" />
+          <i className="add icon" onClick={e => addMovie(movie, "watched")} />
           Watched
         </span>
         <span className="right floated star">
-          <i className="star icon" onClick={e => addMovie(movie)} />
+          <i className="star icon" onClick={e => addMovie(movie, "favorite")} />
           Favorite
         </span>
       </div>

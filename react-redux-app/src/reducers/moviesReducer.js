@@ -2,14 +2,16 @@ import {
   FETCH_MOVIES_DATA_FAILURE,
   FETCH_MOVIES_DATA_START,
   FETCH_MOVIES_DATA_SUCCESS,
-  ADD_FAVORITE_MOVIE
+  ADD_FAVORITE_MOVIE,
+  ADD_WATCHED_MOVIE
 } from "../actions";
 
 const initialState = {
   movies: [],
   isLoading: false,
   error: "",
-  favoritemovies: []
+  favoritemovies: [],
+  watchedmovies: []
 };
 
 export const moviesReducer = (state = initialState, action) => {
@@ -37,6 +39,11 @@ export const moviesReducer = (state = initialState, action) => {
       return {
         ...state,
         favoritemovies: [...state.favoritemovies, action.payload]
+      };
+    case ADD_WATCHED_MOVIE:
+      return {
+        ...state,
+        watchedmovies: [...state.watchedmovies, action.payload]
       };
     default:
       return state;
