@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import Loader from "react-loader-spinner";
 
@@ -8,7 +8,7 @@ import Movie from "./Movie";
 import MoviesNav from "./MoviesNav";
 
 const MoviesList = props => {
-  const [list, setList] = useState("all");
+  const [list, setList] = useState("movies");
   console.log(list);
 
   console.log(props);
@@ -17,6 +17,10 @@ const MoviesList = props => {
     type === "watched" && props.addWatched(movie);
   };
 
+  useEffect(() => {
+    props.getData();
+  }, []);
+
   return (
     <>
       <MoviesNav setList={setList} getData={props.getData} />
@@ -24,7 +28,7 @@ const MoviesList = props => {
         <Loader type="tailspin" color="#00BFFF" height="15" width="100" />
       )}
       <div className="movies-list all">
-        {props.movies.map(movie => (
+        {props[list].map(movie => (
           <Movie key={movie.id} movie={movie} addMovie={addMovie} />
         ))}
       </div>
