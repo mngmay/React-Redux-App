@@ -33,7 +33,7 @@ h1 {
   width: 950px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: space-between;
   background-color: transparent;
 }
@@ -59,16 +59,4 @@ button:hover {
   background-color: white;
   border: 1px dashed #106198;
   color: #106198;
-}
-
-.all {
-  display: flex;
-}
-
-.favs {
-  display: none;
-}
-
-.watched {
-  display: none;
 }
