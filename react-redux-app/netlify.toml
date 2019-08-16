@@ -2,7 +2,7 @@
 base = "react-redux-app/"
 publish= "react-redux-app/build/"
 
-[redirects]
+[[redirects]]
 from = "/*"
 to = "/index.html"
 status = 200
