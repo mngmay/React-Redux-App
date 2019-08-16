@@ -17,7 +17,7 @@ h1 {
 .header-img {
   background: url(https://i2.wp.com/animeworks.com.au/wp-content/uploads/2018/05/studio-ghibli-banner.png?w=970&ssl=1)
     left top no-repeat;
-  box-shadow: 25px 25px 50px 0#106198 inset, -25px -25px 50px 0#106198 inset;
+  box-shadow: 50px 50px 50px #106198 inset, -50px -40px 30px #106198 inset;
   width: 1000px;
   height: 300px;
 }

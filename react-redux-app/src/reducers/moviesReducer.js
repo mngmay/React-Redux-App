@@ -36,10 +36,6 @@ export const moviesReducer = (state = initialState, action) => {
         error: action.payload
       };
     case ADD_FAVORITE_MOVIE:
-      console.log(state.favoritemovies);
-      if (!state.favoritemovies.includes(action.payload)) {
-        console.log("not included");
-      }
       return {
         ...state,
         favoritemovies: [...state.favoritemovies, action.payload]
