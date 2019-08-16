@@ -36,16 +36,27 @@ export const moviesReducer = (state = initialState, action) => {
         error: action.payload
       };
     case ADD_FAVORITE_MOVIE:
-      return {
-        ...state,
-        favoritemovies: [...state.favoritemovies, action.payload]
-      };
-
+      if (!state.favoritemovies.includes(action.payload)) {
+        return {
+          ...state,
+          favoritemovies: [...state.favoritemovies, action.payload]
+        };
+      } else {
+        return {
+          ...state
+        };
+      }
     case ADD_WATCHED_MOVIE:
-      return {
-        ...state,
-        watchedmovies: [...state.watchedmovies, action.payload]
-      };
+      if (!state.watchedmovies.includes(action.payload)) {
+        return {
+          ...state,
+          watchedmovies: [...state.watchedmovies, action.payload]
+        };
+      } else {
+        return {
+          ...state
+        };
+      }
     default:
       return state;
   }

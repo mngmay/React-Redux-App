@@ -5,7 +5,6 @@ import Loader from "react-loader-spinner";
 import { getData, addFavorite, addWatched } from "../actions";
 
 import Movie from "./Movie";
-import MoviesNav from "./MoviesNav";
 
 const MoviesList = props => {
   const addMovie = (movie, type) => {
