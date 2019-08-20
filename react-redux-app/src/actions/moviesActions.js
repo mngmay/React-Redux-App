@@ -5,6 +5,7 @@ export const FETCH_MOVIES_DATA_SUCCESS = "FETCH_MOVIES_DATA_SUCCESS";
 export const FETCH_MOVIES_DATA_FAILURE = "FETCH_MOVIES_DATA_FAILURE";
 export const ADD_FAVORITE_MOVIE = "ADD_FAVORITE_MOVIE";
 export const ADD_WATCHED_MOVIE = "ADD_WATCHED_MOVIE";
+export const FILTER_SEARCHED_MOVIE = "FILTER_SEARCHED_MOVIE";
 
 export const getData = () => {
   return dispatch => {
@@ -26,4 +27,9 @@ export const addFavorite = movie => {
 
 export const addWatched = movie => {
   return { type: ADD_WATCHED_MOVIE, payload: movie };
+};
+
+export const filterMovie = movie => {
+  console.log("moviesActions", movie);
+  return { type: FILTER_SEARCHED_MOVIE, payload: movie };
 };

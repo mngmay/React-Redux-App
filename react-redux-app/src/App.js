@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import MoviesNav from "./components/MoviesNav";
 import MoviesList from "./components/MoviesList";
 import Header from "./components/Header";
-import { Search } from "./components/Search";
+import Search from "./components/Search";
 
 function App() {
   const [list, setList] = useState("movies");

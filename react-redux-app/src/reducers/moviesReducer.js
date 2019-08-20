@@ -3,7 +3,8 @@ import {
   FETCH_MOVIES_DATA_START,
   FETCH_MOVIES_DATA_SUCCESS,
   ADD_FAVORITE_MOVIE,
-  ADD_WATCHED_MOVIE
+  ADD_WATCHED_MOVIE,
+  FILTER_SEARCHED_MOVIE
 } from "../actions";
 
 const initialState = {
@@ -15,6 +16,7 @@ const initialState = {
 };
 
 export const moviesReducer = (state = initialState, action) => {
+  console.log(action.type);
   switch (action.type) {
     case FETCH_MOVIES_DATA_START:
       return {
@@ -57,6 +59,13 @@ export const moviesReducer = (state = initialState, action) => {
           ...state
         };
       }
+    case FILTER_SEARCHED_MOVIE:
+      console.log("state", state.movies);
+      console.log(action.payload);
+      return {
+        ...state,
+        movies: state.movies.filter(movie => movie.title === action.payload)
+      };
     default:
       return state;
   }
