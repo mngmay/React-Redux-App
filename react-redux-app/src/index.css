@@ -1,0 +1,62 @@
+body {
+  background-color: #106198;
+}
+
+h1 {
+  color: white;
+  font-size: 50px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header-img {
+  background: url(https://i2.wp.com/animeworks.com.au/wp-content/uploads/2018/05/studio-ghibli-banner.png?w=970&ssl=1)
+    left top no-repeat;
+  box-shadow: 50px 50px 50px #106198 inset, -50px -40px 30px #106198 inset;
+  width: 1000px;
+  height: 300px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+}
+
+.movies-list {
+  width: 950px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: space-between;
+  background-color: transparent;
+}
+
+.nav-btns {
+  width: 900px;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+button {
+  outline: none;
+  width: 250px;
+  border-radius: 5px;
+  background-color: #106198;
+  border: 2px solid white;
+  color: white;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: white;
+  border: 1px dashed #106198;
+  color: #106198;
+}
