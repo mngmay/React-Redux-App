@@ -60,11 +60,11 @@ export const moviesReducer = (state = initialState, action) => {
         };
       }
     case FILTER_SEARCHED_MOVIE:
-      console.log("state", state.movies);
-      console.log(action.payload);
       return {
         ...state,
-        movies: state.movies.filter(movie => movie.title === action.payload)
+        movies: state.movies.filter(movie =>
+          movie.title.toLowerCase().includes(action.payload.toLowerCase())
+        )
       };
     default:
       return state;

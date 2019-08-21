@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { filterMovie } from "../actions";
 
-export const Search = props => {
+const Search = props => {
   const [searchedMovie, setSearchedMovie] = useState("");
   console.log(props);
 
